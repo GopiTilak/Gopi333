@@ -82,7 +82,6 @@ ggplot(marvel, aes(x = Appearances, y = Universe, fill = Universe)) +
 library(ggplot2)
 library(dplyr)
 
-# Calculate proportions for normalization
 df_normalized <- marvel %>%
   group_by(Alignment, Universe) %>%
   summarise(Count = n(), .groups = 'drop') %>%
